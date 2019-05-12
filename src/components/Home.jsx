@@ -657,9 +657,9 @@ class Home extends Component {
                     </PortfolioItem>
                 </InternalWrapper>
                 <Footer><a href="mailto:kevin@everysf.com">Get In Touch</a></Footer>
-                {/* <FancyDude className="fancyDude">
+                <FancyDude className="fancyDude">
                     <a href="/exp">                    <img src="img/eye.svg" alt=""/><br/>What is This?</a>
-                </FancyDude> */}
+                </FancyDude>
             </Wrapper>
         );
     }
