@@ -457,7 +457,7 @@ class Home extends Component {
                     <ScrollCont>                    <ScrollDude />
                     </ScrollCont>
                     <Education>
-                        <p>He studied full-stack <span>Web Development</span> at <span>UC Berkeley Extn.</span> and <span>design</span> and <span>marketing</span> at <span>San Francisco State University</span>.<br/><br/>He's worked as various roles for <span>big tech</span>, <span>start-ups</span>, <span>crypto</span>, <span>the federal government</span>, <span>record labels</span>, and <span>himself</span>. </p>
+                        <p>Kevin studied full-stack <span>Web Development</span> at <span>UC Berkeley Extn.</span> and <span>design</span> and <span>marketing</span> at <span>San Francisco State University</span>.<br/><br/>He has worked for <span>big tech</span>, <span>start-ups</span>, <span>crypto</span>, <span>the federal government</span>, <span>record labels</span>, and <span>himself</span>. </p>
                     </Education>
                     <PortfolioHeader className="portfolioHeader">EXPERIENCES</PortfolioHeader>
                     <PortfolioItem image={"macbookmockupswebdc.png"} mobileimage={"mobilemockupdc.png"}className="portfolioItem">
