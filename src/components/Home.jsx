@@ -606,8 +606,7 @@ class Home extends Component {
                     </ScrollCont>
                     <Education>
                         <h1 className="backingText">HELLO</h1>
-                        <p>Kevin studied full-stack <span>Web Development</span> at <span>UC Berkeley Extn.</span> and <span>design</span> and <span>marketing</span> at <span>San Francisco State University</span>.<br /><br />He has worked with <span>big tech</span>, <span>start-ups</span>, <span>cryptocurrencies</span>, <span>the federal government</span>, <span>independent record labels</span>, and contracting <span>on his own</span>. </p>
-
+                        <p>Kevin studied full-stack <span>Web Development</span> at <span>UC Berkeley Extn</span> and <span>design</span> and <span>marketing</span> at <span>San Francisco State University</span>.<br /><br />He has worked for <span>big tech</span>, <span>start-ups</span>, <span>the federal government</span>, <span>cryptocurrencies</span>, <span>independent record labels</span>, and everything in between.</p>
                     </Education>
                     <Footer><a href="/exp" className="desktopOnly">[ What is this? ]</a></Footer>
                     <PortfolioHeader className="portfolioHeader">EXPERIENCES</PortfolioHeader>
@@ -628,7 +627,7 @@ class Home extends Component {
                             </div>
                         </PortfolioItem>
                     ))}
-                    
+
                 </InternalWrapper>
                 <Footer><a href="mailto:kevin@everysf.com">Get In Touch</a></Footer>
                 <FancyDude className="fancyDude">
