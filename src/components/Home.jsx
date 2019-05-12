@@ -29,6 +29,16 @@ const Wrapper = styled.div`
         color: white;
     }
 
+    .desktopOnly {
+        @meda (max-width: 800px) {
+            display: none;
+        }
+    }
+
+    .fancyDude:hover {
+        background-color: white;
+    }
+
     .portfolioItem:hover {
         background-color: #1de9b6;
         color: #642cff;
@@ -80,6 +90,35 @@ const Wrapper = styled.div`
     //     display: flex;
     //     opacity: 1
     // }
+`
+
+const FancyDude = styled.div`
+
+    @media (max-width: 500px) {
+        display: none;
+    }
+
+    img {
+        width: 50px;
+    }
+
+    a {
+        text-align: center;
+    }
+
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px 20px;
+    margin: 10px;
+    border: 1px solid white;
+    a:hover{
+        font-style: italic;
+        letter-spacing: .2px;
+    }
 `
 
 const InternalWrapper = styled.div`
@@ -142,7 +181,6 @@ const GridItem1 = styled.div`
 const Bio = styled.div`
 
     display: flex;
-    // flex-direction: column;
     justify-content: center;
 
     margin: 100px auto 75px;
@@ -165,16 +203,9 @@ const Bio = styled.div`
         border-bottom: 3px solid white;
     }
     
-    // .headshot {
-    //     height: 400px;
-    //     width: 400px;
-    //     mix-blend-mode: difference;
-    //     margin: 20px auto;
-    // }
-
     @media (max-width: 500px) {
         flex-direction: column;
-        margin: 40px auto 75px;
+        margin: 25px auto 35px;
         h1 {
             margin: 0 auto;
             width: 100%;
@@ -184,7 +215,7 @@ const Bio = styled.div`
         .headshot {
             width: 100%;
             height: 300px;
-            margin: 20px auto;
+            margin: 0px auto 20px;
         }
     }
 `
@@ -200,6 +231,9 @@ const Headshot = styled.div`
 const ScrollCont = styled.div`
 
     height: 75px;
+    @media (max-width: 650px) {
+        display: none;
+    }
 
 `
 
@@ -266,6 +300,8 @@ const PortfolioItem = styled.div`
     padding: 10px;
     display: flex;
     margin-top: -1px;
+    position: relative;
+    overflow: hidden;
 
     h1 {
         margin: 0 0 12px 0;
@@ -292,6 +328,20 @@ const PortfolioItem = styled.div`
         padding-top: 10px;
     }
 
+    .backingText {
+        z-index: 0;
+        font-style: italic;
+        letter-spacing: 30px;
+        position: absolute;
+        top: 50%;
+        margin: 0;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: .1;
+        font-size: 150px;
+        font-weight: normal;
+    }
+
     .toolsUsed {
         padding: 5px;
         border: 1px solid #1de9b6;
@@ -300,6 +350,7 @@ const PortfolioItem = styled.div`
     .previewTiles {
         height: 100%;
         margin: 0 0 20px 0;
+        z-index: 100;
         .box1 {
             width: 550px;
             height: 380px;
@@ -375,6 +426,7 @@ const PortfolioItem = styled.div`
 const Footer = styled.div`
 
     margin-top: 30px;
+    margin-bottom: 30px;
     height: 75px;
     border: 1px solid #1de9b6;
     display: flex;
@@ -390,21 +442,18 @@ const Footer = styled.div`
 
 const Education = styled.div`
 
+    position: relative;
     border: 1px solid #1de9b6;
     text-align: center;
     font-size: 30px;
-
-    h1 {
-        background-color: #1de9b6;
-    }
 
     p {
         padding: 80px;
         max-width: 7800px;
         margin: 0 auto;
         line-height: 50px;
+        z-index: 30;
     }
-
 
     span {
         border-bottom: 3px solid #1de9b6;
@@ -416,35 +465,66 @@ const Education = styled.div`
     }
 
     margin-bottom: 30px;
+
+    .backingText {
+        z-index: 0;
+        font-style: italic;
+        letter-spacing: 30px;
+        position: absolute;
+        top: 50%;
+        margin: 0;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: .1;
+        font-size: 200px;
+        font-weight: normal;
+    }
     
     @media (max-width: 500px) {
         font-size: 20px;
        p{
         line-height: 30px;
-        padding: 40px;
+        padding: 20px;
         text-align: left;
        }
+
+       .backingText{
+           font-size: 80px;
+           letter-spacing: 5px;
+       }
     }
+
 
 `
 
 class Home extends Component {
 
+    runAnime() {
+        var tl = anime.timeline({
+            easing: 'easeOutExpo',
+            duration: 1750,
+            loop: true,
+          });
+
+        tl.add(
+        {
+            targets: '.fancyDude',
+            rotate: 360,
+            delay: anime.stagger(200),
+            easing: 'steps(5)',
+        })
+    }
+
     componentDidMount() {
         console.log("Hey, thanks for visiting. Let me know if you want to work together, email me at kevin@everysf.com. Cheers")
-        // anime({
-        //     targets: ".bio .el",
-        //     color: "black",
-        //     delay: anime.stagger(500),
-        //     easing: "linear"
-        // })
+        // this.runAnime()
     }
 
     render() {
         return (
             <Wrapper>
                 <Header className="header">
-                    <Box className="box" width={200} border={true}><a className="contactLink" href="mailto:kevin@everysf.com">Kevin Macaraeg</a></Box>
+                    <Box className="box" width={200} border={true}><a className="contactLink" href="/experimental">Kevin Macaraeg</a></Box>
                     <Box className="box" width={400} border={false}>San Francisco-Based Front End
                     Designer</Box>
                     <Box className="box" width={400} border={true}><a href="https://www.linkedin.com/in/sandiegokevin/">LinkedIn</a></Box>
@@ -454,13 +534,16 @@ class Home extends Component {
                         <Headshot className="headshot"></Headshot>
                         <h1><span className="el">Kevin Macaraeg</span> is a <span className="el">front-end developer</span> with a strong background in <span className="el">design</span>, <span className="el">marketing</span>, and <span className="el">visual communications</span>.</h1>
                     </Bio>
-                    <ScrollCont>                    <ScrollDude />
+                    <ScrollCont><ScrollDude />
                     </ScrollCont>
                     <Education>
-                        <p>Kevin studied full-stack <span>Web Development</span> at <span>UC Berkeley Extn.</span> and <span>design</span> and <span>marketing</span> at <span>San Francisco State University</span>.<br/><br/>He has worked for <span>big tech</span>, <span>start-ups</span>, <span>crypto</span>, <span>the federal government</span>, <span>record labels</span>, and <span>himself</span>. </p>
+                        <h1 className="backingText">HELLO</h1>
+                        <p>Kevin studied full-stack <span>Web Development</span> at <span>UC Berkeley Extn.</span> and <span>design</span> and <span>marketing</span> at <span>San Francisco State University</span>.<br /><br />He has worked with <span>big tech</span>, <span>start-ups</span>, <span>cryptocurrencies</span>, <span>the federal government</span>, <span>independent record labels</span>, and contracting <span>on his own</span>. </p>
+
                     </Education>
+                    <Footer><a href="/experimental" className="desktopOnly">[ What is this? ]</a></Footer>
                     <PortfolioHeader className="portfolioHeader">EXPERIENCES</PortfolioHeader>
-                    <PortfolioItem image={"macbookmockupswebdc.png"} mobileimage={"mobilemockupdc.png"}className="portfolioItem">
+                    <PortfolioItem image={"macbookmockupswebdc.png"} mobileimage={"mobilemockupdc.png"} className="portfolioItem">
                         <div className="year">2019</div>
                         <div className="jobcontent">
                             <h1>Developer, Designer, Branding</h1>
@@ -468,13 +551,13 @@ class Home extends Component {
                             <p>Leading a team of designers and developers in creating beautiful and engaging digital products. Creating UI/UX artboards, full website development, brand guides, sales collateral, and other design</p>
                         </div>
                         <div className="previewTiles">
-                            <a href="https://designcoin.io/">                            
-                            <div className="box1">
-                            </div>
+                            <a href="https://designcoin.io/">
+                                <div className="box1">
+                                </div>
                             </a>
                         </div>
                     </PortfolioItem>
-                    <PortfolioItem image={"macbookmockupswebaegis.png"}  mobileimage={"mobilemockupaegis.png"} className="portfolioItem">
+                    <PortfolioItem image={"macbookmockupswebaegis.png"} mobileimage={"mobilemockupaegis.png"} className="portfolioItem">
                         <div className="year">2019</div>
                         <div className="jobcontent">
                             <h1>Developer, Designer, UI/UX, Branding</h1>
@@ -482,41 +565,41 @@ class Home extends Component {
                             <p>Developed brand identity, designed website, created sales collateral, led UI/UX design of core product</p>
                         </div>
                         <div className="previewTiles">
-                            <a href="https://www.aegiscustody.com/">                            
-                            <div className="box1">
-                            </div>
+                            <a href="https://www.aegiscustody.com/">
+                                <div className="box1">
+                                </div>
                             </a>
                         </div>
                     </PortfolioItem>
-                    <PortfolioItem image={"macbookmockupsweb.png"}  mobileimage={"mobilemockupav.png"} className="portfolioItem">
-                        <div className="year">2018</div>
+                    <PortfolioItem image={"macbookmockupsweb.png"} mobileimage={"mobilemockupav.png"} className="portfolioItem">
+                        <div className="year">2019</div>
                         <div className="jobcontent">
                             <h1>Developer, Designer, UI/UX, Branding</h1>
-                            <a href="https://www.alphavoice.io/">AlphaVoice // Alpha Growth</a>
+                            <a href="https://www.alphavoice.io/">AlphaVoice // AlphaGrowth</a>
                             <p>Developed brand identity, designed web products, attended blockchain and crypto conferences with marketing team</p>
                         </div>
                         <div className="previewTiles">
-                        <a href="https://alphavoice.io/">                             
-                            <div className="box1">
-                            </div>
+                            <a href="https://alphavoice.io/">
+                                <div className="box1">
+                                </div>
                             </a>
                         </div>
                     </PortfolioItem>
-                    <PortfolioItem  mobileimage={"mobilemockupparklets.png"} image={"macbookmockupswebparklets.png"} className="portfolioItem">
-                        <div className="year">2018</div>
+                    <PortfolioItem mobileimage={"mobilemockupparklets.png"} image={"macbookmockupswebparklets.png"} className="portfolioItem">
+                        <div className="year">2019</div>
                         <div className="jobcontent">
                             <h1>Developer, Designer, Branding</h1>
                             <a href="https://parkletsband.com/">Parklets</a>
                             <p>Created website, marketing strategy, brand guides and design direction for San Francisco's New Indie-Softrock band: Parklets</p>
                         </div>
                         <div className="previewTiles">
-                            <a href="https://parkletsband.com/">        
-                            <div className="box1">
-                            </div>
+                            <a href="https://parkletsband.com/">
+                                <div className="box1">
+                                </div>
                             </a>
                         </div>
                     </PortfolioItem>
-                    <PortfolioItem  mobileimage={"mobilemockuppk.png"} image={"macbookmockupswebpk.png"} className="portfolioItem">
+                    <PortfolioItem mobileimage={"mobilemockuppk.png"} image={"macbookmockupswebpk.png"} className="portfolioItem">
                         <div className="year">2018</div>
                         <div className="jobcontent">
                             <h1>Developer, Designer, Branding</h1>
@@ -524,37 +607,37 @@ class Home extends Component {
                             <p>Designed and deployed website for $4 million dollar/year restaurant</p>
                         </div>
                         <div className="previewTiles">
-                            <a href="https://portolakitchen.com/">                            
-                            <div className="box1">
-                            </div>
+                            <a href="https://portolakitchen.com/">
+                                <div className="box1">
+                                </div>
                             </a>
                         </div>
                     </PortfolioItem>
-                    <PortfolioItem  mobileimage={"mobilemockupzai.png"} image={"macbookmockupswebzai.png"} className="portfolioItem">
-                        <div className="year">2018</div>
+                    <PortfolioItem mobileimage={"mobilemockupsc.png"} className="portfolioItem" image={"macbookmockupswebsc.png"}>
+                        <div className="year">2017</div>
+                        <div className="jobcontent">
+                            <h1>Content Analyst</h1>
+                            <a href="https://www.snapchat.com/">Snapchat Inc</a>
+                            <p>Produced user facing media. Worked on the competitive content editing and curating team to develop and deploy 'SnapMaps' with senior engineers</p>
+                        </div>
+                        <div className="previewTiles">
+                            <a href="https://www.snapchat.com/">
+                                <div className="box1">
+                                </div>
+                            </a>
+                        </div>
+                    </PortfolioItem>
+                    <PortfolioItem mobileimage={"mobilemockupzai.png"} image={"macbookmockupswebzai.png"} className="portfolioItem">
+                        <div className="year">2019</div>
                         <div className="jobcontent">
                             <h1>Voice UI/UX Researcher</h1>
                             <a href="https://zammo.ai/">Zammo.ai</a>
                             <p>Conducted research on 150+ websites to find use cases for voice technology-integrated artificial intelligence software</p>
                         </div>
                         <div className="previewTiles">
-                            <a href="https://zammo.ai/">        
-                            <div className="box1">
-                            </div>
-                            </a>
-                        </div>
-                    </PortfolioItem>
-                    <PortfolioItem  mobileimage={"mobilemockupsc.png"} className="portfolioItem" image={"macbookmockupswebsc.png"}>
-                        <div className="year">2017</div>
-                        <div className="jobcontent">
-                            <h1>Content Analyst</h1>
-                            <a href="https://www.snapchat.com/">Snapchat Inc</a>
-                            <p>Worked on the competitive content editing and curating side to develop and deploy Snap Maps with senior engineers</p>
-                        </div>
-                        <div className="previewTiles">
-                            <a href="https://www.snapchat.com/">                            
-                            <div className="box1">
-                            </div>
+                            <a href="https://zammo.ai/">
+                                <div className="box1">
+                                </div>
                             </a>
                         </div>
                     </PortfolioItem>
@@ -563,17 +646,20 @@ class Home extends Component {
                         <div className="jobcontent">
                             <h1>Marketing Representative</h1>
                             <a href="https://www.theorchard.com/">The Orchard</a>
-                            <p>Worked with Sony Music's largest independent distributor to promote up and coming bands signed to major record labels with physical and digital marketing strategies</p>
+                            <p>Worked with Sony Music's largest independent music distributor to promote up and coming bands signed to major record labels with physical and digital marketing strategies</p>
                         </div>
                         <div className="previewTiles">
-                            <a href="https://www.theorchard.com/">                            
-                            <div className="box1">
-                            </div>
+                            <a href="https://www.theorchard.com/">
+                                <div className="box1">
+                                </div>
                             </a>
                         </div>
                     </PortfolioItem>
                 </InternalWrapper>
                 <Footer><a href="mailto:kevin@everysf.com">Get In Touch</a></Footer>
+                <FancyDude className="fancyDude">
+                    <a href="/experimental">                    <img src="img/eye.svg" alt=""/><br/>What is This?</a>
+                </FancyDude>
             </Wrapper>
         );
     }
