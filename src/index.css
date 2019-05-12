@@ -17,6 +17,7 @@ code {
 }
 
 .headshot {
+  will-change: opacity;
   mix-blend-mode: color-dodge;
   z-index: 0;
 }

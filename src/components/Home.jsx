@@ -477,7 +477,7 @@ class Home extends Component {
                         <div className="jobcontent">
                             <h1>Developer, Designer, Branding</h1>
                             <a href="https://portolakitchen.com/">Portola Kitchen</a>
-                            <p>Designed and deployed website for $4 million dollar/year restaurants Portola Kitchen and Palo Alto Kitchen</p>
+                            <p>Designed and deployed website for $4 million dollar/year restaurant</p>
                         </div>
                         <div className="previewTiles">
                             <a href="https://portolakitchen.com/">                            
@@ -486,7 +486,7 @@ class Home extends Component {
                             </a>
                         </div>
                     </PortfolioItem>
-                    <PortfolioItem  mobileimage={"mobilemockupav.png"} image={"macbookmockupswebzai.png"} className="portfolioItem">
+                    <PortfolioItem  mobileimage={"mobilemockupzai.png"} image={"macbookmockupswebzai.png"} className="portfolioItem">
                         <div className="year">2018</div>
                         <div className="jobcontent">
                             <h1>Voice UI/UX Researcher</h1>
