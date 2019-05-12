@@ -504,21 +504,89 @@ class Home extends Component {
             easing: 'easeOutExpo',
             duration: 1750,
             loop: true,
-          });
+        });
 
         tl.add(
-        {
-            targets: '.fancyDude',
-            rotate: 360,
-            delay: anime.stagger(200),
-            easing: 'steps(5)',
-        })
+            {
+                targets: '.fancyDude',
+                rotate: 360,
+                delay: anime.stagger(200),
+                easing: 'steps(5)',
+            })
     }
 
     componentDidMount() {
         console.log("Hey, thanks for visiting. Let me know if you want to work together, email me at kevin@everysf.com. Cheers")
         // this.runAnime()
     }
+
+    jobs = [
+
+        {
+            company: "DesignCoin",
+            year: "NOW",
+            position: "Developer, Designer, Branding",
+            link: "https://designcoin.io/",
+            description: "Leading a team of designers and developers in creating beautiful and engaging digital products. Creating UI/UX artboards, full website development, brand guides, sales collateral, and other design",
+            image: "macbookmockupswebdc.png",
+            mobileimage: "mobilemockupdc.png"
+        },
+        {
+            company: "Aegis Custody",
+            year: "2019",
+            position: "Developer, Designer, UI/UX, Branding",
+            link: "https://www.aegiscustody.com/",
+            description: "Developed brand identity, designed website, created sales collateral, led UI/UX design of core product",
+            image: "macbookmockupswebaegis.png",
+            mobileimage: "mobilemockupaegis.png"
+        },
+        {
+            company: "Portola Kitchen",
+            year: "2018",
+            position: "Developer, Designer, Branding",
+            link: "https://portolakitchen.com/",
+            description: "Designed and deployed website for $4 million dollar/year restaurant",
+            image: "macbookmockupswebpk.png",
+            mobileimage: "mobilemockuppk.png"
+        },
+        {
+            company: "Snapchat Inc",
+            year: "2017",
+            position: "Content Analyst",
+            link: "https://www.snapchat.com/",
+            description: "Produced user facing media. Worked on the competitive content editing and curating team to develop and deploy 'SnapMaps' with senior engineers",
+            image: "macbookmockupswebsc.png",
+            mobileimage: "mobilemockupsc.png"
+        },
+        {
+            company: "Zammo.ai",
+            year: "2019",
+            position: "Voice UI/UX Researcher",
+            link: "https://zammo.ai/",
+            description: "Conducted research on 150+ websites to find use cases for voice technology-integrated artificial intelligence software",
+            image: "macbookmockupswebzai.png",
+            mobileimage: "mobilemockupzai.png"
+        },
+        {
+            company: "The Orchard",
+            year: "2016",
+            position: "Marketing Representative",
+            link: "https://www.theorchard.com/",
+            description: "Worked with Sony Music's largest independent music distributor to promote up and coming bands signed to major record labels with physical and digital marketing strategies",
+            image: "macbookmockupsweborch.png",
+            mobileimage: "mobilemockuporch.png"
+        },
+        {
+            company: "Parklets",
+            year: "2019",
+            position: "Developer, Designer, Branding",
+            link: "https://parkletsband.com/",
+            description: "Created website, marketing strategy, brand guides and design direction for San Francisco's New Indie-Softrock band: Parklets",
+            image: "macbookmockupswebparklets.png",
+            mobileimage: "mobilemockupparklets.png"
+        },
+
+    ]
 
     render() {
         return (
@@ -543,122 +611,28 @@ class Home extends Component {
                     </Education>
                     <Footer><a href="/exp" className="desktopOnly">[ What is this? ]</a></Footer>
                     <PortfolioHeader className="portfolioHeader">EXPERIENCES</PortfolioHeader>
-                    <PortfolioItem image={"macbookmockupswebdc.png"} mobileimage={"mobilemockupdc.png"} className="portfolioItem">
-                        <div className="year">2019</div>
-                        <div className="jobcontent">
-                            <h1>Developer, Designer, Branding</h1>
-                            <a href="https://designcoin.io/">DesignCoin.io</a>
-                            <p>Leading a team of designers and developers in creating beautiful and engaging digital products. Creating UI/UX artboards, full website development, brand guides, sales collateral, and other design</p>
-                        </div>
-                        <div className="previewTiles">
-                            <a href="https://designcoin.io/">
-                                <div className="box1">
-                                </div>
-                            </a>
-                        </div>
-                    </PortfolioItem>
-                    <PortfolioItem image={"macbookmockupswebaegis.png"} mobileimage={"mobilemockupaegis.png"} className="portfolioItem">
-                        <div className="year">2019</div>
-                        <div className="jobcontent">
-                            <h1>Developer, Designer, UI/UX, Branding</h1>
-                            <a href="https://www.aegiscustody.com/">Aegis Custody</a>
-                            <p>Developed brand identity, designed website, created sales collateral, led UI/UX design of core product</p>
-                        </div>
-                        <div className="previewTiles">
-                            <a href="https://www.aegiscustody.com/">
-                                <div className="box1">
-                                </div>
-                            </a>
-                        </div>
-                    </PortfolioItem>
-                    <PortfolioItem image={"macbookmockupsweb.png"} mobileimage={"mobilemockupav.png"} className="portfolioItem">
-                        <div className="year">2019</div>
-                        <div className="jobcontent">
-                            <h1>Developer, Designer, UI/UX, Branding</h1>
-                            <a href="https://www.alphavoice.io/">AlphaVoice // AlphaGrowth</a>
-                            <p>Developed brand identity, designed web products, attended blockchain and crypto conferences with marketing team</p>
-                        </div>
-                        <div className="previewTiles">
-                            <a href="https://alphavoice.io/">
-                                <div className="box1">
-                                </div>
-                            </a>
-                        </div>
-                    </PortfolioItem>
-                    <PortfolioItem mobileimage={"mobilemockupparklets.png"} image={"macbookmockupswebparklets.png"} className="portfolioItem">
-                        <div className="year">2019</div>
-                        <div className="jobcontent">
-                            <h1>Developer, Designer, Branding</h1>
-                            <a href="https://parkletsband.com/">Parklets</a>
-                            <p>Created website, marketing strategy, brand guides and design direction for San Francisco's New Indie-Softrock band: Parklets</p>
-                        </div>
-                        <div className="previewTiles">
-                            <a href="https://parkletsband.com/">
-                                <div className="box1">
-                                </div>
-                            </a>
-                        </div>
-                    </PortfolioItem>
-                    <PortfolioItem mobileimage={"mobilemockuppk.png"} image={"macbookmockupswebpk.png"} className="portfolioItem">
-                        <div className="year">2018</div>
-                        <div className="jobcontent">
-                            <h1>Developer, Designer, Branding</h1>
-                            <a href="https://portolakitchen.com/">Portola Kitchen</a>
-                            <p>Designed and deployed website for $4 million dollar/year restaurant</p>
-                        </div>
-                        <div className="previewTiles">
-                            <a href="https://portolakitchen.com/">
-                                <div className="box1">
-                                </div>
-                            </a>
-                        </div>
-                    </PortfolioItem>
-                    <PortfolioItem mobileimage={"mobilemockupsc.png"} className="portfolioItem" image={"macbookmockupswebsc.png"}>
-                        <div className="year">2017</div>
-                        <div className="jobcontent">
-                            <h1>Content Analyst</h1>
-                            <a href="https://www.snapchat.com/">Snapchat Inc</a>
-                            <p>Produced user facing media. Worked on the competitive content editing and curating team to develop and deploy 'SnapMaps' with senior engineers</p>
-                        </div>
-                        <div className="previewTiles">
-                            <a href="https://www.snapchat.com/">
-                                <div className="box1">
-                                </div>
-                            </a>
-                        </div>
-                    </PortfolioItem>
-                    <PortfolioItem mobileimage={"mobilemockupzai.png"} image={"macbookmockupswebzai.png"} className="portfolioItem">
-                        <div className="year">2019</div>
-                        <div className="jobcontent">
-                            <h1>Voice UI/UX Researcher</h1>
-                            <a href="https://zammo.ai/">Zammo.ai</a>
-                            <p>Conducted research on 150+ websites to find use cases for voice technology-integrated artificial intelligence software</p>
-                        </div>
-                        <div className="previewTiles">
-                            <a href="https://zammo.ai/">
-                                <div className="box1">
-                                </div>
-                            </a>
-                        </div>
-                    </PortfolioItem>
-                    <PortfolioItem mobileimage={"mobilemockuporch.png"} image={"macbookmockupsweborch.png"} className="portfolioItem">
-                        <div className="year">2016</div>
-                        <div className="jobcontent">
-                            <h1>Marketing Representative</h1>
-                            <a href="https://www.theorchard.com/">The Orchard</a>
-                            <p>Worked with Sony Music's largest independent music distributor to promote up and coming bands signed to major record labels with physical and digital marketing strategies</p>
-                        </div>
-                        <div className="previewTiles">
-                            <a href="https://www.theorchard.com/">
-                                <div className="box1">
-                                </div>
-                            </a>
-                        </div>
-                    </PortfolioItem>
+
+                    {this.jobs && this.jobs.map((jobs, i) => (
+                        <PortfolioItem image={jobs.image} mobileimage={jobs.mobileimage} className="portfolioItem">
+                            <div className="year">{jobs.year}</div>
+                            <div className="jobcontent">
+                                <h1>{jobs.position}</h1>
+                                <a href={jobs.link}>{jobs.company}</a>
+                                <p>{jobs.description}</p>
+                            </div>
+                            <div className="previewTiles">
+                                <a href={jobs.link}>
+                                    <div className="box1">
+                                    </div>
+                                </a>
+                            </div>
+                        </PortfolioItem>
+                    ))}
+                    
                 </InternalWrapper>
                 <Footer><a href="mailto:kevin@everysf.com">Get In Touch</a></Footer>
                 <FancyDude className="fancyDude">
-                    <a href="/exp">                    <img src="img/eye.svg" alt=""/><br/>What is This?</a>
+                    <a href="/exp">                    <img src="img/eye.svg" alt="" /><br />What is This?</a>
                 </FancyDude>
             </Wrapper>
         );
