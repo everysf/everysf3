@@ -524,7 +524,7 @@ class Home extends Component {
         return (
             <Wrapper>
                 <Header className="header">
-                    <Box className="box" width={200} border={true}><a className="contactLink" href="/experimental">Kevin Macaraeg</a></Box>
+                    <Box className="box" width={200} border={true}><a className="contactLink" href="/exp">Kevin Macaraeg</a></Box>
                     <Box className="box" width={400} border={false}>San Francisco-Based Front End
                     Designer</Box>
                     <Box className="box" width={400} border={true}><a href="https://www.linkedin.com/in/sandiegokevin/">LinkedIn</a></Box>
@@ -541,7 +541,7 @@ class Home extends Component {
                         <p>Kevin studied full-stack <span>Web Development</span> at <span>UC Berkeley Extn.</span> and <span>design</span> and <span>marketing</span> at <span>San Francisco State University</span>.<br /><br />He has worked with <span>big tech</span>, <span>start-ups</span>, <span>cryptocurrencies</span>, <span>the federal government</span>, <span>independent record labels</span>, and contracting <span>on his own</span>. </p>
 
                     </Education>
-                    <Footer><a href="/experimental" className="desktopOnly">[ What is this? ]</a></Footer>
+                    <Footer><a href="/exp" className="desktopOnly">[ What is this? ]</a></Footer>
                     <PortfolioHeader className="portfolioHeader">EXPERIENCES</PortfolioHeader>
                     <PortfolioItem image={"macbookmockupswebdc.png"} mobileimage={"mobilemockupdc.png"} className="portfolioItem">
                         <div className="year">2019</div>
@@ -658,7 +658,7 @@ class Home extends Component {
                 </InternalWrapper>
                 <Footer><a href="mailto:kevin@everysf.com">Get In Touch</a></Footer>
                 <FancyDude className="fancyDude">
-                    <a href="/experimental">                    <img src="img/eye.svg" alt=""/><br/>What is This?</a>
+                    <a href="/exp">                    <img src="img/eye.svg" alt=""/><br/>What is This?</a>
                 </FancyDude>
             </Wrapper>
         );
