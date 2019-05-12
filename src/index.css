@@ -1,0 +1,22 @@
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #642cff;
+  font-family: 'Roboto Mono', monospace;
+  color: white;
+  
+}
+
+::-moz-selection { color: #1de9b6}
+::selection { color: #1de9b6; }
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.headshot {
+  mix-blend-mode: color-dodge;
+  z-index: 0;
+}
