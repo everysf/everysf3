@@ -388,15 +388,56 @@ const Footer = styled.div`
 
 `
 
+const Education = styled.div`
+
+    border: 1px solid #1de9b6;
+    text-align: center;
+    font-size: 30px;
+
+    h1 {
+        background-color: #1de9b6;
+    }
+
+    p {
+        padding: 80px;
+        max-width: 7800px;
+        margin: 0 auto;
+        line-height: 50px;
+    }
+
+
+    span {
+        border-bottom: 3px solid #1de9b6;
+    }
+
+    span:hover {
+        color: #1de9b6;
+        border-bottom: 3px solid white;
+    }
+
+    margin-bottom: 30px;
+    
+    @media (max-width: 500px) {
+        font-size: 20px;
+       p{
+        line-height: 30px;
+        padding: 40px;
+        text-align: left;
+       }
+    }
+
+`
+
 class Home extends Component {
 
     componentDidMount() {
-        anime({
-            targets: ".bio .el",
-            color: "black",
-            delay: anime.stagger(500),
-            easing: "linear"
-        })
+        console.log("Hey, thanks for visiting. Let me know if you want to work together, email me at kevin@everysf.com. Cheers")
+        // anime({
+        //     targets: ".bio .el",
+        //     color: "black",
+        //     delay: anime.stagger(500),
+        //     easing: "linear"
+        // })
     }
 
     render() {
@@ -415,6 +456,9 @@ class Home extends Component {
                     </Bio>
                     <ScrollCont>                    <ScrollDude />
                     </ScrollCont>
+                    <Education>
+                        <p>He studied full-stack <span>Web Development</span> at <span>UC Berkeley Extn.</span> and <span>design</span> and <span>marketing</span> at <span>San Francisco State University</span>.<br/><br/>He's worked as various roles for <span>big tech</span>, <span>start-ups</span>, <span>crypto</span>, <span>the federal government</span>, <span>record labels</span>, and <span>himself</span>. </p>
+                    </Education>
                     <PortfolioHeader className="portfolioHeader">EXPERIENCES</PortfolioHeader>
                     <PortfolioItem image={"macbookmockupswebdc.png"} mobileimage={"mobilemockupdc.png"}className="portfolioItem">
                         <div className="year">2019</div>
@@ -452,7 +496,7 @@ class Home extends Component {
                             <p>Developed brand identity, designed web products, attended blockchain and crypto conferences with marketing team</p>
                         </div>
                         <div className="previewTiles">
-                            <a href="#https://www.alphavoice.io/">                            
+                        <a href="https://alphavoice.io/">                             
                             <div className="box1">
                             </div>
                             </a>
