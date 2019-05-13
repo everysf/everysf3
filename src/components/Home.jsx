@@ -608,15 +608,15 @@ class Home extends Component {
             image: "macbookmockupswebsc.png",
             mobileimage: "mobilemockupsc.png"
         },
-        {
-            company: "Zammo.ai",
-            year: "2019",
-            position: "Voice UI/UX Researcher",
-            link: "https://zammo.ai/",
-            description: "Conducted research on 150+ websites to find use cases for voice technology-integrated artificial intelligence software",
-            image: "macbookmockupswebzai.png",
-            mobileimage: "mobilemockupzai.png"
-        },
+        // {
+        //     company: "Zammo.ai",
+        //     year: "2019",
+        //     position: "Voice UI/UX Researcher",
+        //     link: "https://zammo.ai/",
+        //     description: "Conducted research on 150+ websites to find use cases for voice technology-integrated artificial intelligence software",
+        //     image: "macbookmockupswebzai.png",
+        //     mobileimage: "mobilemockupzai.png"
+        // },
         {
             company: "The Orchard",
             year: "2016",
