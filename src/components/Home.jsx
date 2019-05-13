@@ -99,7 +99,7 @@ const Wrapper = styled.div`
       
           0%{
             filter: blur(20px);
-            margin-top: -50px;
+            margin-top: 40px;
             opacity: 0;
             margin-bottom: 175px;
           }
@@ -580,6 +580,15 @@ class Home extends Component {
             description: "Developed brand identity, designed website, created sales collateral, led UI/UX design of core product",
             image: "macbookmockupswebaegis.png",
             mobileimage: "mobilemockupaegis.png"
+        },
+        {
+            company: "AlphaVoice // AlphaGrowth",
+            year: "2018",
+            position: "UI/UX, Branding, Designer, Developer",
+            link: "https://www.alphavoice.io/",
+            description: "Developed brand identity for crypto marketing agency, created digital and print assets, attended conferences with marketing team",
+            image: "macbookmockupsweb.png",
+            mobileimage: "mobilemockupav.png"
         },
         {
             company: "Portola Kitchen",
