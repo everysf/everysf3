@@ -116,11 +116,9 @@ class Experimental extends Component {
                 //         return {animationRunning: true};
                 //       });
                 // },
-                // complete: function() {
-                //     this.setState(() => {
-                //         return {animationRunning: false};
-                //       });
-                //   }
+                complete: function() {
+                    // window.location.href = '/'
+                  }
               });
     
             tl.add(

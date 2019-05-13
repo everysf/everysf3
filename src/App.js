@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import styled from 'styled-components'
 import Home from './components/Home'
 import Experimental from './components/Experimental'
+import Fun from './components/Fun'
+
 
 function App() {
   return (
@@ -11,6 +13,7 @@ function App() {
         <Switch>
             <Route exact path="/" component={Home} />
             <Route exact path="/exp" component={Experimental} />
+            <Route exact path="/fun" component={Fun} />
             {/* <Route exact path="/work" component={Work} /> */}
         </Switch>
       </Router>

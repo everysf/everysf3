@@ -90,6 +90,29 @@ const Wrapper = styled.div`
     //     display: flex;
     //     opacity: 1
     // }
+
+    .bio {
+        animation: fadeIn 2s forwards;
+      }
+      
+      @keyframes fadeIn {
+      
+          0%{
+            filter: blur(20px);
+            margin-top: -50px;
+            opacity: 0;
+            margin-bottom: 175px;
+          }
+          50%{
+            opacity: 1;
+          }
+          100%{
+            filter: blur(0px);
+            margin-top: 60px;
+            margin-bottom: 75px;
+          }
+      
+      }
 `
 
 const FancyDude = styled.div`
@@ -106,6 +129,8 @@ const FancyDude = styled.div`
         text-align: center;
     }
 
+    opacity: 0;
+    // box-shadow: 0 0 50px yellow;
     position: fixed;
     bottom: 0;
     left: 0;
@@ -226,6 +251,7 @@ const Headshot = styled.div`
     height: 500px;
     width: 500px;
     background-size: cover;
+    mix-blend-mode: difference;
 `
 
 const ScrollCont = styled.div`
@@ -515,7 +541,22 @@ class Home extends Component {
             })
     }
 
+    showExpLink(){
+        var tl = anime.timeline({
+            easing: 'easeOutExpo',
+            duration: 1750,
+        });
+
+        tl.add({
+            targets: ".fancyDude",
+            opacity: "1",
+            // boxShadow: "0 0 0px yellow",
+            easing: 'steps(20)'
+        }, 10000)
+    }
+
     componentDidMount() {
+        this.showExpLink()
         console.log("Hey, thanks for visiting. Let me know if you want to work together, email me at kevin@everysf.com. Cheers")
         // this.runAnime()
     }
@@ -588,9 +629,28 @@ class Home extends Component {
 
     ]
 
+    openExp(){
+        var tl = anime.timeline({
+            easing: 'easeOutExpo',
+            duration: 900,
+            complete: function() {
+                window.location.href = '/exp'
+              },
+
+        })
+
+        tl.add({
+            targets: '.wrapper',
+            filter: "blur(20px)",
+        }).add({
+            // targets: '.wrapper',
+            // opacity: ".3",
+        })
+    }
+
     render() {
         return (
-            <Wrapper>
+            <Wrapper className="wrapper">
                 <Header className="header">
                     <Box className="box" width={200} border={true}><a className="contactLink" href="/exp">Kevin Macaraeg</a></Box>
                     <Box className="box" width={400} border={false}>San Francisco-Based Front End
@@ -630,7 +690,7 @@ class Home extends Component {
 
                 </InternalWrapper>
                 <Footer><a href="mailto:kevin@everysf.com">Get In Touch</a></Footer>
-                <FancyDude className="fancyDude">
+                <FancyDude className="fancyDude" onClick={this.openExp}>
                     <a href="/exp">                    <img src="img/eye.svg" alt="" /><br />What is This?</a>
                 </FancyDude>
             </Wrapper>
