@@ -457,7 +457,7 @@ class Exp4 extends Component {
             scale: "1",
             easing: "easeInOutSine",
             duration: 1000,
-        }, 14000).add({
+        }, 11000).add({
             targets: "#shape1 .shape",
             delay: anime.stagger(15),
             opacity: 1,
