@@ -35,6 +35,11 @@ const Wrapper = styled.div`
         }
     }
 
+    h1 {
+        font-weight: normal;
+        font-size: 30px;
+    }
+
     .fancyDude:hover {
         background-color: white;
     }
@@ -449,7 +454,7 @@ const PortfolioItem = styled.div`
 
 `
 
-const Footer = styled.div`
+const Paper = styled.div`
 
     margin-top: 30px;
     margin-bottom: 30px;
@@ -652,8 +657,6 @@ class Home extends Component {
             targets: '.wrapper',
             filter: "blur(20px)",
         }).add({
-            // targets: '.wrapper',
-            // opacity: ".3",
         })
     }
 
@@ -661,15 +664,14 @@ class Home extends Component {
         return (
             <Wrapper className="wrapper">
                 <Header className="header">
-                    <Box className="box" width={200} border={true}><a className="contactLink" href="/exp">Kevin Macaraeg</a></Box>
-                    <Box className="box" width={400} border={false}>San Francisco-Based Front End
-                    Designer</Box>
+                    <Box className="box" width={400} border={true}><a className="contactLink" href="/exp">Kevin Macaraeg</a></Box>
+                    <Box className="box" width={400} border={false}>San Francisco, California</Box>
                     <Box className="box" width={400} border={true}><a href="https://www.linkedin.com/in/sandiegokevin/">LinkedIn</a></Box>
                 </Header>
                 <InternalWrapper>
                     <Bio className="bio">
                         <Headshot className="headshot"></Headshot>
-                        <h1><span className="el">Kevin Macaraeg</span> is a <span className="el">front-end developer</span> with a strong background in <span className="el">design</span>, <span className="el">marketing</span>, and <span className="el">visual communications</span>.</h1>
+                        <h1><span className="el">Kevin Macaraeg</span> is a <span className="el">front-end designer</span> with a strong background in <span className="el">design</span>, <span className="el">marketing</span>, and <span className="el">visual communications</span>.</h1>
                     </Bio>
                     <ScrollCont><ScrollDude />
                     </ScrollCont>
@@ -677,7 +679,7 @@ class Home extends Component {
                         <h1 className="backingText">HELLO</h1>
                         <p>Kevin studied full-stack <span>Web Development</span> at <span>UC Berkeley Extn</span> and <span>design</span> and <span>marketing</span> at <span>San Francisco State University</span>.<br /><br />He has worked for <span>big tech</span>, <span>start-ups</span>, <span>the federal government</span>, <span>cryptocurrencies</span>, <span>independent record labels</span>, and everything in between.</p>
                     </Education>
-                    <Footer><a href="/exp" className="desktopOnly">[ What is this? ]</a></Footer>
+                    <Paper><a href="/exp" className="desktopOnly">[ What is this? ]</a></Paper>
                     <PortfolioHeader className="portfolioHeader">EXPERIENCES</PortfolioHeader>
 
                     {this.jobs && this.jobs.map((jobs, i) => (
@@ -698,7 +700,7 @@ class Home extends Component {
                     ))}
 
                 </InternalWrapper>
-                <Footer><a href="mailto:kevin@everysf.com">Get In Touch</a></Footer>
+                <Paper><a href="mailto:kevin@everysf.com">Get In Touch</a></Paper>
                 <FancyDude className="fancyDude" onClick={this.openExp}>
                     <a href="/exp">                    <img src="img/eye.svg" alt="" /><br />What is This?</a>
                 </FancyDude>
