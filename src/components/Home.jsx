@@ -679,7 +679,7 @@ class Home extends Component {
                         <h1 className="backingText">HELLO</h1>
                         <p>Kevin studied full-stack <span>Web Development</span> at <span>UC Berkeley Extn</span> and <span>design</span> and <span>marketing</span> at <span>San Francisco State University</span>.<br /><br />He has worked for <span>big tech</span>, <span>start-ups</span>, <span>the federal government</span>, <span>cryptocurrencies</span>, <span>independent record labels</span>, and everything in between.</p>
                     </Education>
-                    <Paper><a href="/exp" className="desktopOnly">[ What is this? ]</a></Paper>
+                    <Paper><a href="/hello" className="desktopOnly">[ What is this? ]</a></Paper>
                     <PortfolioHeader className="portfolioHeader">EXPERIENCES</PortfolioHeader>
 
                     {this.jobs && this.jobs.map((jobs, i) => (
