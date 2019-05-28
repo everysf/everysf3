@@ -24,7 +24,7 @@ const DynamicItem = styled.div`
 
     height: 500px;
     width: 10px;
-    background-color: #bad897;
+    background-color: #1de9b6;
     opacity: 0;
     margin: 5px;
 
@@ -38,7 +38,7 @@ const Kevin = styled.div`
     transform: translate(-50%,-50%);
     text-align: center;
     opacity:0 ;
-    color: #bad897;;
+    color: #1de9b6;;
 
     a{
         text-decoration: none;
@@ -46,7 +46,7 @@ const Kevin = styled.div`
     }
 
     a:hover {
-        color: #bad897;;
+        color: #1de9b6;;
     }
 
     cursor: pointer;
@@ -158,7 +158,7 @@ class Experimental extends Component {
                     letterSpacing: "5px",
                     opacity: 1,
                     easing: 'cubicBezier(.5, .05, .1, .3)',
-                    color: "#bad897"
+                    color: "#1de9b6"
                 }).add({
                     targets: '.container .el',
                     margin: "0px",
