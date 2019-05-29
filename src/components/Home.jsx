@@ -546,7 +546,7 @@ class Home extends Component {
             })
     }
 
-    showExpLink(){
+    showExpLink() {
         var tl = anime.timeline({
             easing: 'easeOutExpo',
             duration: 1750,
@@ -643,13 +643,13 @@ class Home extends Component {
 
     ]
 
-    openExp(){
+    openExp() {
         var tl = anime.timeline({
             easing: 'easeOutExpo',
             duration: 900,
-            complete: function() {
+            complete: function () {
                 window.location.href = '/exp'
-              },
+            },
 
         })
 
@@ -671,7 +671,7 @@ class Home extends Component {
                 <InternalWrapper>
                     <Bio className="bio">
                         <Headshot className="headshot"></Headshot>
-                        <h1><span className="el">Kevin Macaraeg</span> is a <span className="el">front-end designer</span> with a strong background in <span className="el">Javascript</span>, <span className="el">marketing</span>, and <span className="el">visual communications</span>.</h1>
+                        <h1><span className="el">Kevin Macaraeg</span> is a <span className="el">web designer</span> with a strong background in <span className="el">JavaScript</span>, <span className="el">UI/UX</span>, and <span className="el">marketing</span>.</h1>
                     </Bio>
                     <ScrollCont><ScrollDude />
                     </ScrollCont>
