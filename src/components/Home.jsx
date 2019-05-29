@@ -578,7 +578,7 @@ class Home extends Component {
             mobileimage: "mobilemockupdc.png"
         },
         {
-            company: "Aegis Custody",
+            company: "Aegis Crypto Custody",
             year: "2019",
             position: "Developer, Designer, UI/UX, Branding",
             link: "https://www.aegiscustody.com/",
@@ -625,9 +625,9 @@ class Home extends Component {
         {
             company: "The Orchard",
             year: "2016",
-            position: "Marketing Representative",
+            position: "College Marketing Rep",
             link: "https://www.theorchard.com/",
-            description: "Worked with Sony Music's largest independent music distributor to promote up and coming bands signed to major record labels with physical and digital marketing strategies",
+            description: "Worked with Sony Music's largest independent music distributor to promote up and coming bands signed to major and independent record labels with physical and digital marketing strategies",
             image: "macbookmockupsweborch.png",
             mobileimage: "mobilemockuporch.png"
         },
@@ -671,13 +671,13 @@ class Home extends Component {
                 <InternalWrapper>
                     <Bio className="bio">
                         <Headshot className="headshot"></Headshot>
-                        <h1><span className="el">Kevin Macaraeg</span> is a <span className="el">web designer</span> with a strong background in <span className="el">JavaScript</span>, <span className="el">UI/UX</span>, and <span className="el">marketing</span>.</h1>
+                        <h1><span className="el">Kevin Macaraeg</span> is an <span className="el">interactive designer</span> with a strong background in <span className="el">JavaScript</span>, <span className="el">UI/UX</span>, and <span className="el">marketing</span>.</h1>
                     </Bio>
                     <ScrollCont><ScrollDude />
                     </ScrollCont>
                     <Education>
                         <h1 className="backingText">HELLO</h1>
-                        <p>Kevin studied full-stack <span>Web Development</span> at <span>UC Berkeley Extn</span> and <span>design</span> and <span>marketing</span> at <span>San Francisco State University</span>.<br /><br />He has worked for <span>big tech</span>, <span>start-ups</span>, <span>the federal government</span>, <span>cryptocurrencies</span>, <span>independent record labels</span>, and everything in between.</p>
+                        <p>Kevin studied full-stack <span>Web Development</span> at <span>UC Berkeley Extn</span> and <span>design</span> and <span>marketing</span> at <span>San Francisco State University</span>.<br /><br />He has worked in <span>big tech</span>, <span>start-ups</span>, <span>the federal government</span>, <span>cryptocurrencies</span>, <span>the music industry</span>, and everything in between.</p>
                     </Education>
                     <Paper><a href="/hello" className="desktopOnly">[ What is this? ]</a></Paper>
                     <PortfolioHeader className="portfolioHeader">EXPERIENCES</PortfolioHeader>
