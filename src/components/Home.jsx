@@ -567,10 +567,19 @@ class Home extends Component {
     }
 
     jobs = [
-
         {
-            company: "DesignCoin",
+            company: "The Orchard",
             year: "NOW",
+            position: "Interactive Designer",
+            link: "https://www.theorchard.com/",
+            description: "Designing for Sony Music's largest independent music distributor to promote up and coming bands signed to major and independent record labels with physical and digital marketing strategies",
+            image: "macbookmockupsweborch.png",
+            mobileimage: "mobilemockuporch.png"
+        },
+        {
+            
+            company: "DesignCoin",
+            year: "2019",
             position: "Developer, Designer, Branding",
             link: "https://designcoin.io/",
             description: "Leading a team of designers and developers in creating beautiful and engaging digital products. Creating UI/UX artboards, full website development, brand guides, sales collateral, and other design",
@@ -622,15 +631,6 @@ class Home extends Component {
         //     image: "macbookmockupswebzai.png",
         //     mobileimage: "mobilemockupzai.png"
         // },
-        {
-            company: "The Orchard",
-            year: "2016",
-            position: "College Marketing Rep",
-            link: "https://www.theorchard.com/",
-            description: "Worked with Sony Music's largest independent music distributor to promote up and coming bands signed to major and independent record labels with physical and digital marketing strategies",
-            image: "macbookmockupsweborch.png",
-            mobileimage: "mobilemockuporch.png"
-        },
         {
             company: "Parklets",
             year: "2019",
